@@ -10,6 +10,7 @@ function BasePlayerCard(props) {
                         "url('namecards/Namecard_Background_" +
                         props.nameCard +
                         ".png",
+                    backgroundSize: "cover",
                 }}
             >
                 <div className="flex justify-center pt-3">
