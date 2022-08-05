@@ -3,7 +3,7 @@ import "./App.css";
 import BasePlayerCard from "./components/BasePlayerCard";
 import Footer from "./components/Footer";
 import axios from "axios";
-import EmptyPlayerCard from "./components/EmptyPlayerCard";
+import LoadingPlayerCard from "./components/LoadingPlayerCard";
 
 function App() {
     const [isLoading, setIsLoading] = useState(false);
@@ -28,14 +28,9 @@ function App() {
                 console.log("Error");
             });
 
-        fetch(`json/namecards.json`, {
-            headers: {
-                "Content-Type": "application/json",
-                Accept: "application/json",
-            },
-        })
-            .then((response) => response.json())
-            .then((data) => setNameCards(data));
+        axios.get("json/namecards.json").then((response) => {
+            setNameCards(response.data);
+        });
 
         setHasQueried(true);
     }
@@ -59,7 +54,7 @@ function App() {
                         </button>
                     </div>
                     {!hasQueried ? null : isLoading ? (
-                        <EmptyPlayerCard />
+                        <LoadingPlayerCard />
                     ) : (
                         <BasePlayerCard
                             uid={uid}
