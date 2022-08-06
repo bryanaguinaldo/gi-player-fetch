@@ -232,8 +232,8 @@
     },
     "10000047": {
         "element": "Anemo", 
-        "name": "Kazuha",
-        "thumbnail": "Character_Kazuha_Thumb",
+        "name": "Kaedehara Kazuha",
+        "thumbnail": "Character_Kaedehara_Kazuha_Thumb",
         "constellations": [],
         "rating": 5
     },
@@ -247,7 +247,7 @@
     "10000049": {
         "element": "Pyro", 
         "name": "Yoimiya",
-        "thumbnail": "Character_Mona_Thumb",
+        "thumbnail": "Character_Yoimiya_Thumb",
         "constellations": [],
         "rating": 5
     },
@@ -310,7 +310,7 @@
     "10000058": {
         "element": "Electro", 
         "name": "Yae Miko",
-        "thumbnail": "Character_Arataki_Itto_Thumb",
+        "thumbnail": "Character_Yae_Miko_Thumb",
         "constellations": [],
         "rating": 5
     },

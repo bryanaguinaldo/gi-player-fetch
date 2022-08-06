@@ -8,7 +8,9 @@ function BasePlayerCard(props) {
                 style={{
                     backgroundImage:
                         "url('namecards/Namecard_Background_" +
-                        props.nameCard +
+                        (props.nameCard == null
+                            ? "Namecard_Background_Genshin_Impact_A_New_World"
+                            : props.nameCard) +
                         ".png",
                     backgroundSize: "cover",
                 }}
@@ -25,7 +27,19 @@ function BasePlayerCard(props) {
                         <div className="w-[87px] h-[87px] sm:h-[135px] sm:w-[135px] lg:h-[156px] lg:w-[156px] rounded-full bg-gi-tan shadow-lg flex justify-center items-center">
                             <div className="w-[83px] h-[83px] sm:h-[129px] sm:w-[129px] lg:h-[151px] lg:w-[151px] rounded-full bg-gi-alabaster shadow-md">
                                 <div className="h-full flex justify-center items-center">
-                                    <div className="w-[76px] h-[76px] sm:w-[118px] sm:h-[118px] lg:w-[138px] lg:h-[138px] bg-gi-antique-brass rounded-full shadow-inner shadow-lg bg-[url('../public/characters/Character_Ganyu_Thumb.png')] bg-center bg-[length:125%]" />
+                                    <div
+                                        className="w-[76px] h-[76px] sm:w-[118px] sm:h-[118px] lg:w-[138px] lg:h-[138px] bg-gi-antique-brass rounded-full shadow-inner shadow-lg"
+                                        style={{
+                                            backgroundImage:
+                                                "url('characters/" +
+                                                (props.profilePicture == null
+                                                    ? "Character_Aether_Thumb"
+                                                    : props.profilePicture) +
+                                                ".png')",
+                                            backgroundPosition: "center",
+                                            backgroundSize: "125%",
+                                        }}
+                                    />
                                 </div>
                             </div>
                         </div>
