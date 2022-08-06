@@ -252,10 +252,115 @@
         "rating": 5
     },
     "10000050": {
+        "element": "Pyro", 
+        "name": "Tohma",
+        "thumbnail": "Character_Tohma_Thumb",
+        "constellations": [],
+        "rating": 4
+    },
+    "10000051": {
+        "element": "Cryo", 
+        "name": "Eula",
+        "thumbnail": "Character_Eula_Thumb",
+        "constellations": [],
+        "rating": 5
+    },
+    "10000052": {
+        "element": "Electro", 
+        "name": "Raiden Shogun",
+        "thumbnail": "Character_Raiden_Shogun_Thumb",
+        "constellations": [],
+        "rating": 5
+    },
+    "10000053": {
+        "element": "Anemo", 
+        "name": "Sayu",
+        "thumbnail": "Character_Sayu_Thumb",
+        "constellations": [],
+        "rating": 4
+    },
+    "10000054": {
+        "element": "Hydro", 
+        "name": "Sangonomiya Kokomi",
+        "thumbnail": "Character_Sangonomiya_Kokomi_Thumb",
+        "constellations": [],
+        "rating": 5
+    },
+    "10000055": {
         "element": "Hydro", 
         "name": "Tohma",
         "thumbnail": "Character_Tohma_Thumb",
         "constellations": [],
         "rating": 4
+    },
+    "10000056": {
+        "element": "Geo", 
+        "name": "Gorou",
+        "thumbnail": "Character_Gorou_Thumb",
+        "constellations": [],
+        "rating": 4
+    },
+    "10000057": {
+        "element": "Electro", 
+        "name": "Kujou Sara",
+        "thumbnail": "Character_Kujou_Sara_Thumb",
+        "constellations": [],
+        "rating": 4
+    },
+    "10000058": {
+        "element": "Electro", 
+        "name": "Yae Miko",
+        "thumbnail": "Character_Arataki_Itto_Thumb",
+        "constellations": [],
+        "rating": 5
+    },
+    "10000059": {
+        "element": "Anemo", 
+        "name": "Shikanoin Heizou",
+        "thumbnail": "Character_Shikanoin_Heizou_Thumb",
+        "constellations": [],
+        "rating": 4
+    },
+    "10000060": {
+        "element": "Hydro", 
+        "name": "Yelan",
+        "thumbnail": "Character_Yelan_Thumb",
+        "constellations": [],
+        "rating": 5
+    },
+    "10000062": {
+        "element": "Cryo", 
+        "name": "Aloy",
+        "thumbnail": "Character_Aloy_Thumb",
+        "constellations": [],
+        "rating": 0
+    },
+    "10000063": {
+        "element": "Cryo", 
+        "name": "Shenhe",
+        "thumbnail": "Character_Shenhe_Thumb",
+        "constellations": [],
+        "rating": 5
+    },
+    "10000064": {
+        "element": "Geo", 
+        "name": "Yunjin",
+        "thumbnail": "Character_Yunjin_Thumb",
+        "constellations": [],
+        "rating": 4
+    },
+    "10000065": {
+        "element": "Electro", 
+        "name": "Kuki Shinobu",
+        "thumbnail": "Character_Kuki_Shinobu_Thumb",
+        "constellations": [],
+        "rating": 4
+    },
+    "10000066": {
+        "element": "Hydro", 
+        "name": "Kamisato Ayato",
+        "thumbnail": "Character_Kamisato_Ayato_Thumb",
+        "constellations": [],
+        "rating": 5
     }
 }
