@@ -11,6 +11,7 @@ module.exports = {
             "gi-olivine": "#A7B982",
             white: "#ffffff",
             black: "#000000",
+            danger: "#fc3030",
         },
         backgroundSize: {
             "50%": "50%",

@@ -52,14 +52,21 @@ function App() {
                 <Loading />
             ) : hasError ? (
                 <div className="h-screen w-full flex justify-center items-center">
-                    <Main
-                        onChange={(value) => {
-                            setUid(value);
-                        }}
-                        onClick={() => {
-                            handleRequest();
-                        }}
-                    />
+                    <div className="w-full">
+                        <Main
+                            onChange={(value) => {
+                                setUid(value);
+                            }}
+                            onClick={() => {
+                                handleRequest();
+                            }}
+                        />
+                        <div>
+                            <span className="text-danger">
+                                Player not found!
+                            </span>
+                        </div>
+                    </div>
                 </div>
             ) : (
                 <Query
