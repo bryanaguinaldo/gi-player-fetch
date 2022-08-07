@@ -40,7 +40,6 @@ function App() {
             {!hasQueried ? (
                 <div className="h-screen w-full flex justify-center items-center">
                     <Main
-                        height="12"
                         onChange={(value) => {
                             setUid(value);
                         }}
