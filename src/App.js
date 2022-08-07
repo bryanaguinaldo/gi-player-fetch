@@ -1,22 +1,18 @@
 import { useState } from "react";
 import "./App.css";
-import BasePlayerCard from "./components/BasePlayerCard";
 import Footer from "./components/Footer";
 import axios from "axios";
-import MessageCard from "./components/MessageCard";
+import Main from "./components/Main";
+import Loading from "./components/Loading";
+import Query from "./components/Query";
 
 function App() {
     const [isLoading, setIsLoading] = useState(false);
     const [hasQueried, setHasQueried] = useState(false);
     const [userData, setUserData] = useState(null);
-    const [nameCards, setNameCards] = useState(null);
     const [profilePicture, setProfilePicture] = useState(null);
     const [uid, setUid] = useState(0);
     const [hasError, setHasError] = useState(false);
-
-    function handleUidChange(val) {
-        setUid(() => val);
-    }
 
     function handleRequest() {
         setIsLoading(true);
@@ -32,10 +28,6 @@ function App() {
                 setHasError(true);
             });
 
-        axios.get("json/namecards.json").then((response) => {
-            setNameCards(response.data);
-        });
-
         axios.get("json/characters.json").then((response) => {
             setProfilePicture(response.data);
         });
@@ -45,68 +37,49 @@ function App() {
 
     return (
         <div className="App">
-            <div className="h-screen w-full flex justify-center items-center">
-                <div>
-                    <div className="flex items-center justify-center">
-                        <input
-                            type="text"
-                            className="w-3/4 h-10 rounded-md mx-2 my-2 text-center"
-                            placeholder="Enter UID..."
-                            onChange={(e) => handleUidChange(e.target.value)}
-                            onKeyPress={(e) => {
-                                !/[0-9]/.test(e.key) && e.preventDefault();
-                                uid.length >= 9 && e.preventDefault();
-                            }}
-                        />
-                        <button
-                            className="w-1/4 h-10 bg-gi-alabaster shadow-lg rounded-md mx-2 my-2"
-                            disabled={
-                                uid.length !== 9 || isNaN(uid) ? true : false
-                            }
-                            onClick={handleRequest}
-                        >
-                            Find
-                        </button>
-                    </div>
-                    {!hasQueried ? null : isLoading ? (
-                        <MessageCard message="Loading..." />
-                    ) : hasError ? (
-                        <MessageCard message="Not Found." />
-                    ) : (
-                        <BasePlayerCard
-                            uid={uid}
-                            nameCard={
-                                userData == null
-                                    ? "Genshin_Impact_A_New_World"
-                                    : nameCards[userData.playerInfo.nameCardId]
-                            }
-                            profilePicture={
-                                profilePicture[
-                                    userData.playerInfo.profilePicture.avatarId
-                                ].thumbnail
-                            }
-                            nickname={
-                                userData == null
-                                    ? "Undefined"
-                                    : userData.playerInfo.nickname
-                            }
-                            adventureRank={
-                                userData == null ? 0 : userData.playerInfo.level
-                            }
-                            worldLevel={
-                                userData == null
-                                    ? 0
-                                    : userData.playerInfo.worldLevel
-                            }
-                            signature={
-                                userData == null
-                                    ? null
-                                    : userData.playerInfo.signature
-                            }
-                        />
-                    )}
+            {!hasQueried ? (
+                <div className="h-screen w-full flex justify-center items-center">
+                    <Main
+                        height="12"
+                        onChange={(value) => {
+                            setUid(value);
+                        }}
+                        onClick={() => {
+                            handleRequest();
+                        }}
+                    />
                 </div>
-            </div>
+            ) : isLoading ? (
+                <Loading />
+            ) : hasError ? (
+                <div className="h-screen w-full flex justify-center items-center">
+                    <Main
+                        onChange={(value) => {
+                            setUid(value);
+                        }}
+                        onClick={() => {
+                            handleRequest();
+                        }}
+                    />
+                </div>
+            ) : (
+                <Query
+                    profilePicture={
+                        profilePicture[
+                            userData.playerInfo.profilePicture.avatarId
+                        ].thumbnail
+                    }
+                    playerName={userData.playerInfo.nickname}
+                    adventureRank={userData.playerInfo.level}
+                    worldLevel={userData.playerInfo.worldLevel}
+                    onChange={(value) => {
+                        setUid(value);
+                    }}
+                    onClick={() => {
+                        handleRequest();
+                    }}
+                />
+            )}
             <Footer />
         </div>
     );
