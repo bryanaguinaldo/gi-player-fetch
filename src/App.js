@@ -72,6 +72,9 @@ function App() {
                     adventureRank={userData.playerInfo.level}
                     worldLevel={userData.playerInfo.worldLevel}
                     signature={userData.playerInfo.signature}
+                    achievementCount={userData.playerInfo.finishAchievementNum}
+                    abyssFloor={userData.playerInfo.towerFloorIndex}
+                    abyssChamber={userData.playerInfo.towerLevelIndex}
                     onClick={() => {
                         setHasQueried(false);
                     }}

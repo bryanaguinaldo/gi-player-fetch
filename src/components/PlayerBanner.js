@@ -7,7 +7,7 @@ library.add(fas);
 
 function PlayerBanner(props) {
     return (
-        <div className="bg-gi-alabaster h-28 w-full border-2 border-white rounded-full px-9 flex items-center">
+        <div className="bg-gi-alabaster h-28 w-full border-2 border-white rounded-full px-9 flex items-center player-banner bg-none">
             <div className="flex items-center">
                 <div
                     className="h-[90px] w-[90px] border-2 border-white bg-gi-antique-brass rounded-full shadow-inner shadow-lg"

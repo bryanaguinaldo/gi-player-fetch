@@ -1,9 +1,9 @@
 import React from "react";
-import Main from "./Main";
 import PlayerBanner from "./PlayerBanner";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";
+import CharacterShowcaseCard from "./CharacterShowcaseCard";
 
 library.add(fas);
 
@@ -28,6 +28,36 @@ function Query(props) {
                     worldLevel={props.worldLevel}
                     signature={props.signature}
                 />
+                <div className="flex justify-center mt-4 gap-2">
+                    <div className="grid grid-cols-12 gap-2">
+                        <div className="col-span-12 sm:col-span-6">
+                            <div className="w-60 py-4 h-24 bg-gi-alabaster rounded-2xl text-gi-police-blue shadow-lg">
+                                <span>Achievements</span>
+                                <br />
+                                <span className="text-3xl">
+                                    {props.achievementCount == null
+                                        ? 0
+                                        : props.achievementCount}
+                                </span>
+                            </div>
+                        </div>
+                        <div className="col-span-12 sm:col-span-6">
+                            <div className="w-60 py-4 h-24 bg-gi-alabaster rounded-2xl text-gi-police-blue shadow-lg">
+                                <span>Abyss</span>
+                                <br />
+                                <span className="text-3xl">
+                                    {props.abyssFloor == null
+                                        ? 0
+                                        : props.abyssFloor}{" "}
+                                    -{" "}
+                                    {props.abyssFloor == null
+                                        ? 0
+                                        : props.abyssChamber}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     );
