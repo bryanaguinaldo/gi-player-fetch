@@ -15,24 +15,26 @@ function App() {
     const [hasError, setHasError] = useState(false);
 
     function handleRequest() {
-        setIsLoading(true);
-        axios
-            .get(`https://enka.network/u/` + uid + `/__data.json`)
-            .then((response) => {
-                setUserData(response.data);
-                setHasError(false);
-                setIsLoading(false);
-            })
-            .catch((error) => {
-                setIsLoading(false);
-                setHasError(true);
+        if (!isNaN(uid) && uid.length === 9) {
+            setIsLoading(true);
+            axios
+                .get(`https://enka.network/u/` + uid + `/__data.json`)
+                .then((response) => {
+                    setUserData(response.data);
+                    setHasError(false);
+                    setIsLoading(false);
+                })
+                .catch((error) => {
+                    setIsLoading(false);
+                    setHasError(true);
+                });
+
+            axios.get("json/characters.json").then((response) => {
+                setProfilePicture(response.data);
             });
 
-        axios.get("json/characters.json").then((response) => {
-            setProfilePicture(response.data);
-        });
-
-        setHasQueried(true);
+            setHasQueried(true);
+        }
     }
 
     return (
