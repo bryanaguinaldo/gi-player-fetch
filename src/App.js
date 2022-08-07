@@ -72,11 +72,9 @@ function App() {
                     playerName={userData.playerInfo.nickname}
                     adventureRank={userData.playerInfo.level}
                     worldLevel={userData.playerInfo.worldLevel}
-                    onChange={(value) => {
-                        setUid(value);
-                    }}
+                    signature={userData.playerInfo.signature}
                     onClick={() => {
-                        handleRequest();
+                        setHasQueried(false);
                     }}
                 />
             )}
