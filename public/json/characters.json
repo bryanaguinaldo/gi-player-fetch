@@ -14,7 +14,7 @@
         "rating": 5
     },
     "10000005": {
-        "element": "Anemo", 
+        "element": "None", 
         "name": "Aether",
         "thumbnail": "Character_Aether_Thumb",
         "constellations": [],
@@ -28,7 +28,7 @@
         "rating": 4
     },
     "10000007": {
-        "element": "Anemo", 
+        "element": "None", 
         "name": "Lumine",
         "thumbnail": "Character_Lumine_Thumb",
         "constellations": [],

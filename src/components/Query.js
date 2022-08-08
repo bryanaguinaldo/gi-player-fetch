@@ -36,7 +36,11 @@ function Query(props) {
                                 <InfoAACard
                                     icon="Achievement_Wonders_of_the_World"
                                     title="Achievements"
-                                    count={props.achievementCount}
+                                    count={
+                                        props.achievementCount == null
+                                            ? 0
+                                            : props.achievementCount
+                                    }
                                 />
                             </div>
                             <div className="col-span-12 sm:col-span-6">
@@ -68,7 +72,7 @@ function Query(props) {
                                     return (
                                         <div
                                             className="col-span-4 md:col-span-3"
-                                            key={index}
+                                            key={character}
                                         >
                                             <Character
                                                 level={character.level}

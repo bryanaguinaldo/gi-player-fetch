@@ -17,6 +17,7 @@ function Main(props) {
                 onChange={(e) => {
                     props.onChange(e.target.value);
                 }}
+                maxLength={9}
             />
             <button
                 className={
