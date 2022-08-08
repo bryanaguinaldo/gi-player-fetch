@@ -56,45 +56,50 @@ function Query(props) {
                     </div>
                 </div>
                 <div className="mt-4 flex justify-center gap-2">
-                    <div className="grid grid-cols-12 rounded-lg bg-gi-alabaster py-2 px-2 shadow-inner shadow-lg gap-2 text-gi-police-blue">
-                        {props.characters == null ? (
-                            <div className="col-span-12 flex justify-center">
-                                This player has not set any character in their
-                                showcase.
-                            </div>
-                        ) : (
-                            props.characters.map((character) => {
-                                return (
-                                    <div className="col-span-4 md:col-span-3">
-                                        <Character
-                                            level={character.level}
-                                            element={
-                                                "Element_" +
-                                                props.characterData[
-                                                    character.avatarId
-                                                ].element
-                                            }
-                                            characterImage={
-                                                props.characterData[
-                                                    character.avatarId
-                                                ].thumbnail
-                                            }
-                                            characterRating={
-                                                props.characterData[
-                                                    character.avatarId
-                                                ].rating === 4
-                                                    ? "bg-gi-four-star"
-                                                    : props.characterData[
-                                                          character.avatarId
-                                                      ].rating === 5
-                                                    ? "bg-gi-five-star"
-                                                    : "bg-gi-special-character"
-                                            }
-                                        />
-                                    </div>
-                                );
-                            })
-                        )}
+                    <div>
+                        <div className="grid grid-cols-12 rounded-lg bg-gi-alabaster py-2 px-2 shadow-inner shadow-lg gap-2 text-gi-police-blue">
+                            {props.characters == null ? (
+                                <div className="col-span-12 flex justify-center">
+                                    This player has not set any character in
+                                    their showcase.
+                                </div>
+                            ) : (
+                                props.characters.map((character, index) => {
+                                    return (
+                                        <div
+                                            className="col-span-4 md:col-span-3"
+                                            key={index}
+                                        >
+                                            <Character
+                                                level={character.level}
+                                                element={
+                                                    "Element_" +
+                                                    props.characterData[
+                                                        character.avatarId
+                                                    ].element
+                                                }
+                                                characterImage={
+                                                    props.characterData[
+                                                        character.avatarId
+                                                    ].thumbnail
+                                                }
+                                                characterRating={
+                                                    props.characterData[
+                                                        character.avatarId
+                                                    ].rating === 4
+                                                        ? "bg-gi-four-star"
+                                                        : props.characterData[
+                                                              character.avatarId
+                                                          ].rating === 5
+                                                        ? "bg-gi-five-star"
+                                                        : "bg-gi-special-character"
+                                                }
+                                            />
+                                        </div>
+                                    );
+                                })
+                            )}
+                        </div>
                     </div>
                 </div>
             </div>
