@@ -88,6 +88,8 @@ function App() {
                     characterData={profilePicture}
                     onClick={() => {
                         setHasQueried(false);
+                        setUserData(null);
+                        setUid(null);
                     }}
                 />
             )}
