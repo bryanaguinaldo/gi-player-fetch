@@ -84,6 +84,8 @@ function App() {
                     achievementCount={userData.playerInfo.finishAchievementNum}
                     abyssFloor={userData.playerInfo.towerFloorIndex}
                     abyssChamber={userData.playerInfo.towerLevelIndex}
+                    characters={userData.playerInfo.showAvatarInfoList}
+                    characterData={profilePicture}
                     onClick={() => {
                         setHasQueried(false);
                     }}

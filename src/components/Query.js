@@ -3,7 +3,7 @@ import PlayerBanner from "./PlayerBanner";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import CharacterShowcaseCard from "./CharacterShowcaseCard";
+import Character from "./Character";
 import InfoAACard from "./InfoAACard";
 
 library.add(fas);
@@ -29,28 +29,66 @@ function Query(props) {
                     worldLevel={props.worldLevel}
                     signature={props.signature}
                 />
-                <div className="flex justify-center mt-4 gap-2">
-                    <div className="grid grid-cols-12 gap-2">
-                        <div className="col-span-12 sm:col-span-6">
-                            <InfoAACard
-                                icon="Achievement_Wonders_of_the_World"
-                                title="Achievements"
-                                count={props.achievementCount}
-                            />
+                <div className="flex justify-center gap-2">
+                    <div className="mt-4">
+                        <div className="grid grid-cols-12 gap-2">
+                            <div className="col-span-12 sm:col-span-6">
+                                <InfoAACard
+                                    icon="Achievement_Wonders_of_the_World"
+                                    title="Achievements"
+                                    count={props.achievementCount}
+                                />
+                            </div>
+                            <div className="col-span-12 sm:col-span-6">
+                                <InfoAACard
+                                    icon="Achievement_Domains_and_Spiral_Abyss_Series_I"
+                                    title="Spiral Abyss"
+                                    count={
+                                        props.abyssFloor == null
+                                            ? "Not yet attempted"
+                                            : props.abyssFloor +
+                                              " - " +
+                                              props.abyssChamber
+                                    }
+                                />
+                            </div>
                         </div>
-                        <div className="col-span-12 sm:col-span-6">
-                            <InfoAACard
-                                icon="Achievement_Domains_and_Spiral_Abyss_Series_I"
-                                title="Spiral Abyss"
-                                count={
-                                    props.abyssFloor == null
-                                        ? "Not yet attempted"
-                                        : props.abyssFloor +
-                                          " - " +
-                                          props.abyssChamber
-                                }
-                            />
-                        </div>
+                    </div>
+                </div>
+                <div className="mt-4 flex justify-center gap-2">
+                    <div className="grid grid-cols-12 rounded-lg bg-gi-alabaster py-2 px-2 shadow-inner shadow-lg gap-2 text-gi-police-blue">
+                        {props.characters == null ? (
+                            <div className="col-span-12 flex justify-center">
+                                This player has not set any character in their
+                                showcase.
+                            </div>
+                        ) : (
+                            props.characters.map((character) => {
+                                return (
+                                    <div className="col-span-4 md:col-span-3">
+                                        <Character
+                                            level={character.level}
+                                            characterImage={
+                                                props.characterData[
+                                                    character.avatarId
+                                                ].thumbnail
+                                            }
+                                            characterRating={
+                                                props.characterData[
+                                                    character.avatarId
+                                                ].rating === 4
+                                                    ? "bg-gi-four-star"
+                                                    : props.characterData[
+                                                          character.avatarId
+                                                      ].rating === 5
+                                                    ? "bg-gi-five-star"
+                                                    : "bg-gi-special-character"
+                                            }
+                                        />
+                                    </div>
+                                );
+                            })
+                        )}
                     </div>
                 </div>
             </div>
