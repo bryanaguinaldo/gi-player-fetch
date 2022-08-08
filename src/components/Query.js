@@ -68,6 +68,12 @@ function Query(props) {
                                     <div className="col-span-4 md:col-span-3">
                                         <Character
                                             level={character.level}
+                                            element={
+                                                "Element_" +
+                                                props.characterData[
+                                                    character.avatarId
+                                                ].element
+                                            }
                                             characterImage={
                                                 props.characterData[
                                                     character.avatarId
