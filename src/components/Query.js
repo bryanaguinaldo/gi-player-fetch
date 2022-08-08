@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import CharacterShowcaseCard from "./CharacterShowcaseCard";
+import InfoAACard from "./InfoAACard";
 
 library.add(fas);
 
@@ -31,30 +32,24 @@ function Query(props) {
                 <div className="flex justify-center mt-4 gap-2">
                     <div className="grid grid-cols-12 gap-2">
                         <div className="col-span-12 sm:col-span-6">
-                            <div className="w-60 py-4 h-24 bg-gi-alabaster rounded-2xl text-gi-police-blue shadow-lg">
-                                <span>Achievements</span>
-                                <br />
-                                <span className="text-3xl">
-                                    {props.achievementCount == null
-                                        ? 0
-                                        : props.achievementCount}
-                                </span>
-                            </div>
+                            <InfoAACard
+                                icon="Achievement_Wonders_of_the_World"
+                                title="Achievements"
+                                count={props.achievementCount}
+                            />
                         </div>
                         <div className="col-span-12 sm:col-span-6">
-                            <div className="w-60 py-4 h-24 bg-gi-alabaster rounded-2xl text-gi-police-blue shadow-lg">
-                                <span>Abyss</span>
-                                <br />
-                                <span className="text-3xl">
-                                    {props.abyssFloor == null
-                                        ? 0
-                                        : props.abyssFloor}{" "}
-                                    -{" "}
-                                    {props.abyssFloor == null
-                                        ? 0
-                                        : props.abyssChamber}
-                                </span>
-                            </div>
+                            <InfoAACard
+                                icon="Achievement_Domains_and_Spiral_Abyss_Series_I"
+                                title="Spiral Abyss"
+                                count={
+                                    props.abyssFloor == null
+                                        ? "Not yet attempted"
+                                        : props.abyssFloor +
+                                          " - " +
+                                          props.abyssChamber
+                                }
+                            />
                         </div>
                     </div>
                 </div>
