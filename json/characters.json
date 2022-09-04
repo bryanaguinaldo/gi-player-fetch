@@ -1,365 +1,386 @@
 {
     "10000002": {
-        "element": "Cryo", 
+        "element": "Cryo",
         "name": "Kamisato Ayaka",
         "thumbnail": "Character_Kamisato_Ayaka_Thumb",
         "constellations": [],
         "rating": 5
     },
     "10000003": {
-        "element": "Anemo", 
+        "element": "Anemo",
         "name": "Jean",
         "thumbnail": "Character_Jean_Thumb",
         "constellations": [],
         "rating": 5
     },
     "10000005": {
-        "element": "Anemo", 
+        "element": "None",
         "name": "Aether",
         "thumbnail": "Character_Aether_Thumb",
         "constellations": [],
         "rating": 5
     },
     "10000006": {
-        "element": "Electro", 
+        "element": "Electro",
         "name": "Lisa",
         "thumbnail": "Character_Lisa_Thumb",
         "constellations": [],
         "rating": 4
     },
     "10000007": {
-        "element": "Anemo", 
+        "element": "None",
         "name": "Lumine",
         "thumbnail": "Character_Lumine_Thumb",
         "constellations": [],
         "rating": 5
     },
     "10000014": {
-        "element": "Hydro", 
+        "element": "Hydro",
         "name": "Barbara",
         "thumbnail": "Character_Barbara_Thumb",
         "constellations": [],
         "rating": 4
     },
     "10000015": {
-        "element": "Cryo", 
+        "element": "Cryo",
         "name": "Kaeya",
         "thumbnail": "Character_Kaeya_Thumb",
         "constellations": [],
         "rating": 4
     },
     "10000016": {
-        "element": "Pyro", 
+        "element": "Pyro",
         "name": "Diluc",
         "thumbnail": "Character_Diluc_Thumb",
         "constellations": [],
         "rating": 5
     },
     "10000020": {
-        "element": "Electro", 
+        "element": "Electro",
         "name": "Razor",
         "thumbnail": "Character_Razor_Thumb",
         "constellations": [],
         "rating": 4
     },
     "10000021": {
-        "element": "Pyro", 
+        "element": "Pyro",
         "name": "Amber",
         "thumbnail": "Character_Amber_Thumb",
         "constellations": [],
         "rating": 4
     },
     "10000022": {
-        "element": "Anemo", 
+        "element": "Anemo",
         "name": "Venti",
         "thumbnail": "Character_Venti_Thumb",
         "constellations": [],
         "rating": 5
     },
     "10000023": {
-        "element": "Pyro", 
+        "element": "Pyro",
         "name": "Xiangling",
         "thumbnail": "Character_Xiangling_Thumb",
         "constellations": [],
         "rating": 4
     },
     "10000024": {
-        "element": "Electro", 
+        "element": "Electro",
         "name": "Beidou",
         "thumbnail": "Character_Beidou_Thumb",
         "constellations": [],
         "rating": 4
     },
     "10000025": {
-        "element": "Hydro", 
+        "element": "Hydro",
         "name": "Xingqiu",
         "thumbnail": "Character_Xingqiu_Thumb",
         "constellations": [],
         "rating": 4
     },
     "10000026": {
-        "element": "Anemo", 
+        "element": "Anemo",
         "name": "Xiao",
         "thumbnail": "Character_Xiao_Thumb",
         "constellations": [],
         "rating": 5
     },
     "10000027": {
-        "element": "Geo", 
+        "element": "Geo",
         "name": "Ningguang",
         "thumbnail": "Character_Ningguang_Thumb",
         "constellations": [],
         "rating": 4
     },
     "10000029": {
-        "element": "Pyro", 
+        "element": "Pyro",
         "name": "Klee",
         "thumbnail": "Character_Klee_Thumb",
         "constellations": [],
         "rating": 5
     },
     "10000030": {
-        "element": "Geo", 
+        "element": "Geo",
         "name": "Zhongli",
         "thumbnail": "Character_Zhongli_Thumb",
         "constellations": [],
         "rating": 5
     },
     "10000031": {
-        "element": "Electro", 
+        "element": "Electro",
         "name": "Fischl",
         "thumbnail": "Character_Fischl_Thumb",
         "constellations": [],
         "rating": 5
     },
     "10000032": {
-        "element": "Pyro", 
+        "element": "Pyro",
         "name": "Bennett",
         "thumbnail": "Character_Bennett_Thumb",
         "constellations": [],
         "rating": 4
     },
     "10000033": {
-        "element": "Hydro", 
+        "element": "Hydro",
         "name": "Tartaglia",
         "thumbnail": "Character_Tartaglia_Thumb",
         "constellations": [],
         "rating": 5
     },
     "10000034": {
-        "element": "Geo", 
+        "element": "Geo",
         "name": "Noelle",
         "thumbnail": "Character_Noelle_Thumb",
         "constellations": [],
         "rating": 4
     },
     "10000035": {
-        "element": "Cryo", 
+        "element": "Cryo",
         "name": "Qiqi",
         "thumbnail": "Character_Qiqi_Thumb",
         "constellations": [],
         "rating": 5
     },
     "10000036": {
-        "element": "Cryo", 
+        "element": "Cryo",
         "name": "Chongyun",
         "thumbnail": "Character_Chongyun_Thumb",
         "constellations": [],
         "rating": 4
     },
     "10000037": {
-        "element": "Cryo", 
+        "element": "Cryo",
         "name": "Ganyu",
         "thumbnail": "Character_Ganyu_Thumb",
         "constellations": [],
         "rating": 5
     },
     "10000038": {
-        "element": "Geo", 
+        "element": "Geo",
         "name": "Albedo",
         "thumbnail": "Character_Albedo_Thumb",
         "constellations": [],
         "rating": 5
     },
     "10000039": {
-        "element": "Cryo", 
+        "element": "Cryo",
         "name": "Diona",
         "thumbnail": "Character_Diona_Thumb",
         "constellations": [],
         "rating": 4
     },
     "10000041": {
-        "element": "Hydro", 
+        "element": "Hydro",
         "name": "Mona",
         "thumbnail": "Character_Mona_Thumb",
         "constellations": [],
         "rating": 5
     },
     "10000042": {
-        "element": "Electro", 
+        "element": "Electro",
         "name": "Keqing",
         "thumbnail": "Character_Keqing_Thumb",
         "constellations": [],
         "rating": 5
     },
     "10000043": {
-        "element": "Anemo", 
+        "element": "Anemo",
         "name": "Sucrose",
         "thumbnail": "Character_Sucrose_Thumb",
         "constellations": [],
         "rating": 4
     },
     "10000044": {
-        "element": "Pyro", 
+        "element": "Pyro",
         "name": "Xinyan",
         "thumbnail": "Character_Xinyan_Thumb",
         "constellations": [],
         "rating": 4
     },
     "10000045": {
-        "element": "Cryo", 
+        "element": "Cryo",
         "name": "Rosaria",
         "thumbnail": "Character_Rosaria_Thumb",
         "constellations": [],
         "rating": 5
     },
     "10000046": {
-        "element": "Pyro", 
+        "element": "Pyro",
         "name": "Hu Tao",
         "thumbnail": "Character_Hu_Tao_Thumb",
         "constellations": [],
         "rating": 5
     },
     "10000047": {
-        "element": "Anemo", 
+        "element": "Anemo",
         "name": "Kaedehara Kazuha",
         "thumbnail": "Character_Kaedehara_Kazuha_Thumb",
         "constellations": [],
         "rating": 5
     },
     "10000048": {
-        "element": "Pyro", 
+        "element": "Pyro",
         "name": "Yanfei",
         "thumbnail": "Character_Yanfei_Thumb",
         "constellations": [],
         "rating": 4
     },
     "10000049": {
-        "element": "Pyro", 
+        "element": "Pyro",
         "name": "Yoimiya",
         "thumbnail": "Character_Yoimiya_Thumb",
         "constellations": [],
         "rating": 5
     },
     "10000050": {
-        "element": "Pyro", 
+        "element": "Pyro",
         "name": "Tohma",
         "thumbnail": "Character_Tohma_Thumb",
         "constellations": [],
         "rating": 4
     },
     "10000051": {
-        "element": "Cryo", 
+        "element": "Cryo",
         "name": "Eula",
         "thumbnail": "Character_Eula_Thumb",
         "constellations": [],
         "rating": 5
     },
     "10000052": {
-        "element": "Electro", 
+        "element": "Electro",
         "name": "Raiden Shogun",
         "thumbnail": "Character_Raiden_Shogun_Thumb",
         "constellations": [],
         "rating": 5
     },
     "10000053": {
-        "element": "Anemo", 
+        "element": "Anemo",
         "name": "Sayu",
         "thumbnail": "Character_Sayu_Thumb",
         "constellations": [],
         "rating": 4
     },
     "10000054": {
-        "element": "Hydro", 
+        "element": "Hydro",
         "name": "Sangonomiya Kokomi",
         "thumbnail": "Character_Sangonomiya_Kokomi_Thumb",
         "constellations": [],
         "rating": 5
     },
     "10000055": {
-        "element": "Hydro", 
+        "element": "Hydro",
         "name": "Tohma",
         "thumbnail": "Character_Tohma_Thumb",
         "constellations": [],
         "rating": 4
     },
     "10000056": {
-        "element": "Geo", 
+        "element": "Geo",
         "name": "Gorou",
         "thumbnail": "Character_Gorou_Thumb",
         "constellations": [],
         "rating": 4
     },
     "10000057": {
-        "element": "Electro", 
+        "element": "Electro",
         "name": "Kujou Sara",
         "thumbnail": "Character_Kujou_Sara_Thumb",
         "constellations": [],
         "rating": 4
     },
     "10000058": {
-        "element": "Electro", 
+        "element": "Electro",
         "name": "Yae Miko",
         "thumbnail": "Character_Yae_Miko_Thumb",
         "constellations": [],
         "rating": 5
     },
     "10000059": {
-        "element": "Anemo", 
+        "element": "Anemo",
         "name": "Shikanoin Heizou",
         "thumbnail": "Character_Shikanoin_Heizou_Thumb",
         "constellations": [],
         "rating": 4
     },
     "10000060": {
-        "element": "Hydro", 
+        "element": "Hydro",
         "name": "Yelan",
         "thumbnail": "Character_Yelan_Thumb",
         "constellations": [],
         "rating": 5
     },
     "10000062": {
-        "element": "Cryo", 
+        "element": "Cryo",
         "name": "Aloy",
         "thumbnail": "Character_Aloy_Thumb",
         "constellations": [],
         "rating": 0
     },
     "10000063": {
-        "element": "Cryo", 
+        "element": "Cryo",
         "name": "Shenhe",
         "thumbnail": "Character_Shenhe_Thumb",
         "constellations": [],
         "rating": 5
     },
     "10000064": {
-        "element": "Geo", 
+        "element": "Geo",
         "name": "Yunjin",
         "thumbnail": "Character_Yunjin_Thumb",
         "constellations": [],
         "rating": 4
     },
     "10000065": {
-        "element": "Electro", 
+        "element": "Electro",
         "name": "Kuki Shinobu",
         "thumbnail": "Character_Kuki_Shinobu_Thumb",
         "constellations": [],
         "rating": 4
     },
     "10000066": {
-        "element": "Hydro", 
+        "element": "Hydro",
         "name": "Kamisato Ayato",
         "thumbnail": "Character_Kamisato_Ayato_Thumb",
+        "constellations": [],
+        "rating": 5
+    },
+    "10000067": {
+        "element": "Dendro",
+        "name": "Collei",
+        "thumbnail": "Character_Collei_Thumb",
+        "constellations": [],
+        "rating": 4
+    },
+    "10000068": {
+        "element": "Electro",
+        "name": "Dori",
+        "thumbnail": "Character_Dori_Thumb",
+        "constellations": [],
+        "rating": 5
+    },
+    "10000069": {
+        "element": "Dendro",
+        "name": "Tighnari",
+        "thumbnail": "Character_Tighnari_Thumb",
         "constellations": [],
         "rating": 5
     }
