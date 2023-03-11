@@ -94,7 +94,11 @@ function App() {
                     ).replace("Side_", "")}
                     playerName={playerData.playerInfo.nickname}
                     adventureRank={playerData.playerInfo.level}
-                    worldLevel={playerData.playerInfo.worldLevel}
+                    worldLevel={
+                        playerData.playerInfo.worldLevel == undefined
+                            ? 1
+                            : playerData.playerInfo.worldLevel
+                    }
                     signature={playerData.playerInfo.signature}
                     achievementCount={
                         playerData.playerInfo.finishAchievementNum
