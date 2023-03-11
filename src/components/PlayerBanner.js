@@ -13,10 +13,8 @@ function PlayerBanner(props) {
                     className="h-[90px] w-[90px] border-2 border-white bg-gi-antique-brass rounded-full shadow-inner shadow-lg"
                     style={{
                         backgroundImage:
-                            "url('characters/" +
-                            (props.profilePicture === null
-                                ? "Character_Lumine_Thumb"
-                                : props.profilePicture) +
+                            "url('https://enka.network/ui/" +
+                            props.profilePicture +
                             ".png')",
                         backgroundPosition: "center",
                         backgroundSize: "125%",

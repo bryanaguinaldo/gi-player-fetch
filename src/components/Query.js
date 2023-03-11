@@ -80,21 +80,23 @@ function Query(props) {
                                                     "Element_" +
                                                     props.characterData[
                                                         character.avatarId
-                                                    ].element
+                                                    ].Element
                                                 }
-                                                characterImage={
+                                                characterImage={String(
                                                     props.characterData[
                                                         character.avatarId
-                                                    ].thumbnail
-                                                }
+                                                    ].SideIconName
+                                                ).replace("Side_", "")}
                                                 characterRating={
                                                     props.characterData[
                                                         character.avatarId
-                                                    ].rating === 4
+                                                    ].QualityType ===
+                                                    "QUALITY_PURPLE"
                                                         ? "bg-gi-four-star"
                                                         : props.characterData[
                                                               character.avatarId
-                                                          ].rating === 5
+                                                          ].QualityType ===
+                                                          "QUALITY_ORANGE"
                                                         ? "bg-gi-five-star"
                                                         : "bg-gi-special-character"
                                                 }

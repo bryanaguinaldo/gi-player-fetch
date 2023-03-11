@@ -9,29 +9,46 @@ import Query from "./components/Query";
 function App() {
     const [isLoading, setIsLoading] = useState(false);
     const [hasQueried, setHasQueried] = useState(false);
-    const [userData, setUserData] = useState(null);
-    const [profilePicture, setProfilePicture] = useState(null);
+    const [playerData, setPlayerData] = useState(null);
+    const [characterData, setCharacterData] = useState(null);
     const [uid, setUid] = useState(0);
     const [hasError, setHasError] = useState(false);
+    const [errorMessage, setErrorMessage] = useState("");
 
     function handleRequest() {
         if (!isNaN(uid) && uid.length === 9) {
             setIsLoading(true);
             axios
-                .get(`https://enka.network/u/` + uid + `/__data.json`)
+                .get(`https://enka.network/api/uid/` + uid)
                 .then((response) => {
-                    setUserData(response.data);
-                    setHasError(false);
-                    setIsLoading(false);
+                    if (response.data.playerInfo.nickname == undefined) {
+                        setIsLoading(false);
+                        setErrorMessage("Player not found!");
+                        setHasError(true);
+                    } else {
+                        setPlayerData(response.data);
+                        setHasError(false);
+                        setIsLoading(false);
+                    }
                 })
                 .catch((error) => {
                     setIsLoading(false);
+                    setErrorMessage("Player not found!");
                     setHasError(true);
                 });
 
-            axios.get("json/characters.json").then((response) => {
-                setProfilePicture(response.data);
-            });
+            axios
+                .get("json/character.json")
+                .then((response) => {
+                    setCharacterData(response.data);
+                })
+                .catch((error) => {
+                    setIsLoading(false);
+                    setErrorMessage(
+                        "Oops! This project has not been updated to the latest version."
+                    );
+                    setHasError(true);
+                });
 
             setHasQueried(true);
         }
@@ -64,31 +81,31 @@ function App() {
                             }}
                         />
                         <div>
-                            <span className="text-danger">
-                                Player not found!
-                            </span>
+                            <span className="text-danger">{errorMessage}</span>
                         </div>
                     </div>
                 </div>
             ) : (
                 <Query
-                    profilePicture={
-                        profilePicture[
-                            userData.playerInfo.profilePicture.avatarId
-                        ].thumbnail
+                    profilePicture={String(
+                        characterData[
+                            playerData.playerInfo.profilePicture.avatarId
+                        ].SideIconName
+                    ).replace("Side_", "")}
+                    playerName={playerData.playerInfo.nickname}
+                    adventureRank={playerData.playerInfo.level}
+                    worldLevel={playerData.playerInfo.worldLevel}
+                    signature={playerData.playerInfo.signature}
+                    achievementCount={
+                        playerData.playerInfo.finishAchievementNum
                     }
-                    playerName={userData.playerInfo.nickname}
-                    adventureRank={userData.playerInfo.level}
-                    worldLevel={userData.playerInfo.worldLevel}
-                    signature={userData.playerInfo.signature}
-                    achievementCount={userData.playerInfo.finishAchievementNum}
-                    abyssFloor={userData.playerInfo.towerFloorIndex}
-                    abyssChamber={userData.playerInfo.towerLevelIndex}
-                    characters={userData.playerInfo.showAvatarInfoList}
-                    characterData={profilePicture}
+                    abyssFloor={playerData.playerInfo.towerFloorIndex}
+                    abyssChamber={playerData.playerInfo.towerLevelIndex}
+                    characters={playerData.playerInfo.showAvatarInfoList}
+                    characterData={characterData}
                     onClick={() => {
                         setHasQueried(false);
-                        setUserData(null);
+                        // setPlayerData(null);
                         setUid(null);
                     }}
                 />

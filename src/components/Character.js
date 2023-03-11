@@ -11,7 +11,9 @@ function Character(props) {
                 }
                 style={{
                     backgroundImage:
-                        "url('characters/" + props.characterImage + ".png')",
+                        "url('http://enka.network/ui/" +
+                        props.characterImage +
+                        ".png')",
                     backgroundPosition: "center",
                     backgroundSize: "contain",
                 }}
