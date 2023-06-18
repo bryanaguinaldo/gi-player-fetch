@@ -38,7 +38,9 @@ function App() {
                 });
 
             axios
-                .get("json/character.json")
+                .get(
+                    "https://raw.githubusercontent.com/EnkaNetwork/API-docs/master/store/characters.json"
+                )
                 .then((response) => {
                     setCharacterData(response.data);
                 })
