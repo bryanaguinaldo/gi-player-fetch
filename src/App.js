@@ -5,6 +5,7 @@ import axios from "axios";
 import Main from "./components/Main";
 import Loading from "./components/Loading";
 import Query from "./components/Query";
+// "homepage": "https://bryanaguinaldo.github.io/gi-player-fetch/",
 
 function App() {
     const [isLoading, setIsLoading] = useState(false);
@@ -19,9 +20,14 @@ function App() {
         if (!isNaN(uid) && uid.length === 9) {
             setIsLoading(true);
             axios
-                .get(`https://enka.network/api/uid/` + uid)
+                .get(`https://enka.network/api/uid/` + uid, {
+                    headers: {
+                        "Access-Control-Allow-Origin": "*",
+                    },
+                    responseType: "json",
+                })
                 .then((response) => {
-                    if (response.data.playerInfo.nickname == undefined) {
+                    if (response.data.playerInfo.nickname === undefined) {
                         setIsLoading(false);
                         setErrorMessage("Player not found!");
                         setHasError(true);
@@ -30,10 +36,11 @@ function App() {
                         setHasError(false);
                         setIsLoading(false);
                     }
+                    console.log("test");
                 })
                 .catch((error) => {
                     setIsLoading(false);
-                    setErrorMessage("Player not found!");
+                    setErrorMessage("An error has occured.");
                     setHasError(true);
                 });
 
@@ -97,7 +104,7 @@ function App() {
                     playerName={playerData.playerInfo.nickname}
                     adventureRank={playerData.playerInfo.level}
                     worldLevel={
-                        playerData.playerInfo.worldLevel == undefined
+                        playerData.playerInfo.worldLevel === undefined
                             ? 1
                             : playerData.playerInfo.worldLevel
                     }
