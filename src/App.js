@@ -5,7 +5,6 @@ import axios from "axios";
 import Main from "./components/Main";
 import Loading from "./components/Loading";
 import Query from "./components/Query";
-// "homepage": "https://bryanaguinaldo.github.io/gi-player-fetch/",
 
 function App() {
     const [isLoading, setIsLoading] = useState(false);
